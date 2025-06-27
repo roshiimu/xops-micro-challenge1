@@ -1,7 +1,94 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #e0f7fa;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+header, section, footer {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+}
+
+h1, h2 {
+    color: #0057b7;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+button {
+    background-color: #0057b7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003f8a;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+#responseMsg {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+footer p {
     text-align: center;
-    padding-top: 100px;
-    color: #00796b;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #0057b7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

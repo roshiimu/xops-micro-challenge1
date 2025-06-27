@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>XOps App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Hello from XOps!</h1>
+    <header>
+        <h1>Welcome to XOps!</h1>
+        <p>Your go-to app for DevOps challenges.</p>
+    </header>
+
+    <section class="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Easy to use interface</li>
+            <li>Fast deployment</li>
+            <li>Scalable architecture</li>
+        </ul>
+    </section>
+
+    <section class="interactive">
+        <h2>Try it out!</h2>
+        <button id="alertBtn">Click Me</button>
+    </section>
+
+    <section class="form-section">
+        <h2>Send us your feedback</h2>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your feedback" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="responseMsg" class="hidden"></p>
+    </section>
+
+    <footer>
+        <p>Check out our <a href="https://github.com/roshiimu/xops-micro-challenge1" target="_blank" rel="noopener noreferrer">GitHub Repo</a></p>
+    </footer>
+
+    <script>
+        // Alert button click
+        document.getElementById('alertBtn').addEventListener('click', () => {
+            alert('Button clicked! Thanks for trying XOps.');
+        });
+
+        // Handle feedback form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = this.name.value.trim();
+            const message = this.message.value.trim();
+
+            if (name && message) {
+                const responseMsg = document.getElementById('responseMsg');
+                responseMsg.textContent = `Thanks for your feedback, ${name}!`;
+                responseMsg.classList.remove('hidden');
+                this.reset();
+            }
+        });
+    </script>
 </body>
 </html>
